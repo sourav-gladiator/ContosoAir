@@ -27,8 +27,9 @@ app.engine('hbs', exphbs({
         i18n: (s, req) => new Handlebars.SafeString(req.data.root.__(s))
     }
 }));
-app.set('view engine', 'hbs');
 
+//testing
+app.set('view engine', 'hbs');
 app.use(favicon(__dirname + '/public/assets/favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./src/routes'));
